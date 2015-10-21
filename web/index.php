@@ -32,7 +32,7 @@ if (null !== $userID) {
 
     $attributes = array(
         'voice' => 'alice',
-        'language' => 'en-GB'
+        'language' => 'en-CA'
     );
 
     $time = "";
@@ -48,7 +48,8 @@ if (null !== $userID) {
         );
 
     $twilioResponse->say($response, $attributes);
-    $twilioResponse->dial( $user['phone_number'], $attributes);
+    // $twilioResponse->dial( $user['phone_number'], $attributes);
+    $twilioResponse->dial( $user['phone_number']);
 
     // send response
     if (!headers_sent()) {
